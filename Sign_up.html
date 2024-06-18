@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס הרשמה - ניפוץ חלומות</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: right;
+        }
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>הירשם עכשיו וצלול לתהום הייאוש!</h1>
+    <form action="Crazy_response.html" method="post">
+        <label for="name">שם מלא (כדי שנדע במי לחבל):</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">אימייל (לספאם אין סופי):</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="despair_level">רמת הייאוש הנוכחית שלך:</label>
+    <select id="despair_level" name="despair_level" required>
+        <option value="">-- בחר --</option>
+        <option value="1">עדיין מלא תקווה (טירון)</option>
+        <option value="2">מתחיל להתייאש (יש עוד עבודה)</option>
+        <option value="3">מיואש ברמה סבירה (בדרך הנכונה)</option>
+        <option value="4">אובדן תקווה מוחלט (מצויין!)</option>
+    </select>
+
+    <label for="dreams">תאר/י בקצרה את החלומות שברצונך לנפץ:</label>
+    <textarea id="dreams" name="dreams" rows="4" required></textarea>
+
+    <input type="submit" value="קפוץ למים העמוקים של חוסר התקווה!">
+</form>
+</body>
+</html>

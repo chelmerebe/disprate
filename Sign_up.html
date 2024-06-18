@@ -19,7 +19,7 @@
             display: block;
             margin-bottom: 10px;
         }
-        input[type="submit"] {
+        button {
             background-color: #ff0000;
             color: #fff;
             padding: 10px 20px;
@@ -32,13 +32,12 @@
 </head>
 <body>
     <h1>הירשם עכשיו וצלול לתהום הייאוש!</h1>
-    <form action="Crazy_response.html" method="post">
+    <form>
         <label for="name">שם מלא (כדי שנדע במי לחבל):</label>
         <input type="text" id="name" name="name" required>
         <label for="email">אימייל (לספאם אין סופי):</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="despair_level">רמת הייאוש הנוכחית שלך:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="despair_level">רמת הייאוש הנוכחית שלך:</label>
     <select id="despair_level" name="despair_level" required>
         <option value="">-- בחר --</option>
         <option value="1">עדיין מלא תקווה (טירון)</option>
@@ -50,7 +49,9 @@
     <label for="dreams">תאר/י בקצרה את החלומות שברצונך לנפץ:</label>
     <textarea id="dreams" name="dreams" rows="4" required></textarea>
 
-    <input type="submit" value="קפוץ למים העמוקים של חוסר התקווה!">
+    <a href="Crazy_response.html">
+        <button type="button">קפוץ למים העמוקים של חוסר התקווה!</button>
+    </a>
 </form>
 </body>
 </html>

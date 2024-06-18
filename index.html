@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ניפוץ חלומות - המקום שבו החלומות הולכים למות</title>
     <style>
+            .feature {
+        cursor: pointer;
+    }
+
+    .explosion {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        background-color: #ff4d4d;
+        opacity: 0;
+        pointer-events: none;
+        animation: explode 2s forwards;
+    }
+
+    @keyframes explode {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+        50% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(2);
+        }
+    }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -90,6 +121,35 @@
             padding: 20px;
             text-align: center;
         }
+            #despair-text {
+        position: relative;
+        display: inline-block;
+    }
+
+    #despair-generator:hover #despair-text {
+        animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translate(-5px, 5px);
+        }
+        40% {
+            transform: translate(-5px, -5px);
+        }
+        60% {
+            transform: translate(5px, 5px);
+        }
+        80% {
+            transform: translate(5px, -5px);
+        }
+        100% {
+            transform: translate(0);
+        }
+    }
     </style>
 </head>
 <body>
@@ -111,27 +171,29 @@
     </section>
 
     <section class="features">
-        <div class="feature">
-            <img src="reality_check.jpg" alt="בדיקת מציאות">
-            <div class="feature-text">
-                <h2>בדיקת מציאות</h2>
-                <p>ננפץ את האשליות שלך!</p>
-            </div>
+<div class="feature">
+    <a href="reality_check_quiz.html">
+        <img src="reality_check.jpg" alt="בדיקת מציאות">
+        <div class="feature-text">
+            <h2>בדיקת מציאות</h2>
+            <p>ננפץ את האשליות שלך!</p>
         </div>
-        <div class="feature">
-            <img src="dream_crusher.jpg" alt="מרסק חלומות">
-            <div class="feature-text">
-                <h2>מרסק חלומות</h2>
-                <p>נרסק את החלומות שלך!</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="despair_generator.jpg" alt="מחולל ייאוש">
-            <div class="feature-text">
-                <h2>מחולל ייאוש</h2>
-                <p>נמלא אותך בחוסר אונים!</p>
-            </div>
-        </div>
+    </a>
+</div>
+<div class="feature" id="dream-crusher">
+    <img src="dream_crusher.jpg" alt="מרסק חלומות">
+    <div class="feature-text">
+        <h2>מרסק חלומות</h2>
+        <p>נרסק את החלומות שלך!</p>
+    </div>
+</div>
+<div class="feature" id="despair-generator">
+    <img src="despair_generator.jpg" alt="מחולל ייאוש">
+    <div class="feature-text">
+        <h2>מחולל ייאוש</h2>
+        <p id="despair-text">נמלא אותך בחוסר אונים!</p>
+    </div>
+</div>
     </section>
 </main>
 
@@ -139,4 +201,17 @@
     <p>&copy; 2023 ניפוץ חלומות. אין לנו אחריות על הנזקים הנפשיים שנגרמו.</p>
 </footer>
 </body>
+<script>
+    const dreamCrusher = document.getElementById('dream-crusher');
+
+    dreamCrusher.addEventListener('click', function() {
+        const explosion = document.createElement('div');
+        explosion.classList.add('explosion');
+        document.body.appendChild(explosion);
+
+        setTimeout(() => {
+            document.body.innerHTML = '<h1>החלומות שלך נמחקו!</h1>';
+        }, 2000);
+    });
+</script>
 </html>

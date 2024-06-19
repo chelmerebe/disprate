@@ -11,6 +11,7 @@
             color: #ff0000;
             text-align: center;
             animation: crazy 1s infinite;
+            padding: 20px;
         }
         @keyframes crazy {
             0% { transform: rotate(0deg); }
@@ -20,19 +21,29 @@
             100% { transform: rotate(0deg); }
         }
         h1 {
-            font-size: 50px;
+            font-size: 10vw;
             text-shadow: 0 0 10px #ff0000;
+            margin-bottom: 20px;
         }
         p {
-            font-size: 30px;
+            font-size: 5vw;
             color: #fff;
+            margin-bottom: 20px;
         }
         img {
-            max-width: 100%;
+            max-width: 80%;
             animation: spin 2s linear infinite;
         }
         @keyframes spin {
             100% { transform: rotate(360deg); }
+        }
+        @media screen and (min-width: 768px) {
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 30px;
+            }
         }
     </style>
 </head>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אין פיתרון</title>
-    <style>
+  <style>
         body {
             font-family: 'Courier New', monospace;
             background-color: #222;
@@ -14,21 +14,27 @@
             overflow: hidden;
         }
         .quote {
-        position: absolute;
-        font-size: 2em;
-        white-space: nowrap;
-        animation: float 10s linear infinite;
-    }
+            position: absolute;
+            font-size: 2em;
+            white-space: nowrap;
+            animation: float 10s linear infinite;
+        }
 
-    @keyframes float {
-        0% {
-            transform: translateX(-100%);
+        @keyframes float {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
         }
-        100% {
-            transform: translateX(100%);
+
+        @media screen and (max-width: 768px) {
+            .quote {
+                font-size: 1.2em;
+            }
         }
-    }
-</style>
+    </style>
     </head>
 <body>
     <script>
@@ -159,31 +165,30 @@
             "הבעיות לעולם לא ייפתרו, רק צורתן תשתנה. אין פתרון, יש רק השלמה עם המצב הנתון."
         ];
 
-    const maxQuotes = 10;
-    const quoteElements = [];
+      const maxQuotes = 10;
+        const quoteElements = [];
 
-    function createQuote() {
-        const quote = document.createElement('div');
-        quote.classList.add('quote');
-        quote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
-        quote.style.left = `-${quote.offsetWidth}px`;
-        quote.style.top = `${Math.random() * (window.innerHeight - quote.offsetHeight)}px`;
-        document.body.appendChild(quote);
+        function createQuote() {
+            const quote = document.createElement('div');
+            quote.classList.add('quote');
+            quote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+            quote.style.left = `-${quote.offsetWidth}px`;
+            quote.style.top = `${Math.random() * (window.innerHeight - quote.offsetHeight)}px`;
+            document.body.appendChild(quote);
 
-        quoteElements.push(quote);
+            quoteElements.push(quote);
 
-        if (quoteElements.length > maxQuotes) {
-            const oldestQuote = quoteElements.shift();
-            oldestQuote.remove();
+            if (quoteElements.length > maxQuotes) {
+                const oldestQuote = quoteElements.shift();
+                oldestQuote.remove();
+            }
         }
-    }
 
-    // יצירת 5 פתגמים ראשוניים
-    for (let i = 0; i < 5; i++) {
-        createQuote();
-    }
+        for (let i = 0; i < 5; i++) {
+            createQuote();
+        }
 
-    setInterval(createQuote, 2000);
-</script>
+        setInterval(createQuote, 2000);
+    </script>
 </body>
 </html>

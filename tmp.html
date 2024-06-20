@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אין פיתרון</title>
+    <style>
+        /* ... */
+        .treasure-note {
+            direction: rtl;
+            background-image: url('https://i.imgur.com/GCQfwTg.jpg');
+            background-size: cover;
+            padding: 50px;
+            font-family: 'David Libre', serif;
+            color: #4b2e1c;
+            font-size: 24px;
+            text-shadow: 1px 1px 3px rgba(255,255,255,0.5);
+            border: 15px solid #8b5a2b;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+            margin: 20px;
+        }
+        .treasure-note h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #8b0000;
+            text-decoration: underline;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .treasure-note p {
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+        .treasure-note button {
+            font-size: 24px;
+            padding: 10px 20px;
+            background-color: #8b0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            font-family: 'David Libre', serif;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        // ...
+        function createBall() {
+            // ...
+            ball.addEventListener('click', () => {
+                const newWindow = window.open();
+                newWindow.document.write(`
+                    <div class="treasure-note">
+                        <h1>${randomParagraph.title}</h1>
+                        <p>${randomParagraph.content}</p>
+                        <button onclick="window.close()">סגור את המגילה</button>
+                    </div>
+                `);
+            });
+            // ...
+        }
+        // ...
+    </script>
+</body>
+</html>

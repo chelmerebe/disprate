@@ -52,6 +52,48 @@
                 font-size: 1em;
             }
         }
+
+    .treasure-note {
+        direction: rtl;
+        background-image: url('https://i.imgur.com/GCQfwTg.jpg');
+        background-size: cover;
+        padding: 50px;
+        font-family: 'David Libre', serif;
+        color: #4b2e1c;
+        font-size: 24px;
+        text-shadow: 1px 1px 3px rgba(255,255,255,0.5);
+        border: 15px solid #8b5a2b;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+        margin: 20px;
+    }
+    .treasure-note h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #8b0000;
+        text-decoration: underline;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .treasure-note p {
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+    .treasure-note button {
+        font-size: 24px;
+        padding: 10px 20px;
+        background-color: #8b0000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        font-family: 'David Libre', serif;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap" rel="stylesheet">
     </style>
 </head>
 <body>
@@ -164,7 +206,7 @@
             "מילוי משאלה מוליד רק צימאון חדש לשאיפה אחרת.",
             "ככל שתגשים את חלומותיך, כך יתרבו המשאלות שלא תוכל למלא.",
             "כל הצלחה היא רק הכנה לתסכול הבא, שיבוא בבטחה.",
-            "שביעות רצון היא רק מעצור זמני בריצת המרוץ האינסופי למשאלות.",
+            "שביעות רצון היא רק מעצורה זמנית בריצת המרוץ האינסופית למשאלות.",
             "תמלא משאלה, תגלה שתיווצר מיד משאלה חדשה שלא תוכל למלא.",
             "המלא את כל חלומותיך, וימשיכו להתעורר חלומות חדשים שיפתיעו אותך.",
             "אשליית השביעות הרצון היא רק הפסקה לרגע בחיפוש הבלתי פוסק אחר הבלתי-מושג.",
@@ -180,6 +222,22 @@
             "כל פיתרון שקיים הוא רק אשליה זמנית, שכן הבעיה תחזור במחופשה אחרת.",
             "אל תבקש פיתרונות, הם לא קיימים. ההכרה בחוסר הפיתרון היא המפתח היחיד.",
             "אל תחפש את הפיתרון, כי הוא לא יימצא לעולם. קבל את הבעיה כחלק בלתי נמנע.",
+            "האשליות הן הכלוב הזהוב שאנו בונים סביב עצמנו, והמציאות היא הציפור שמסרבת לשיר.",
+"אנו נאחזים בחלומות כמו טובעים בקש, גם כשהם מושכים אותנו למצולות.",
+"המציאות היא כמו שמש קופחת, והאשליות הן הצל המדומה שאנו מנסים להסתתר בו.",
+"אנו מנסים לרצות את כל אומללי העולם, ובתהליך הופכים לאומללים בעצמנו.",
+"הפנטזיות שלנו הן כמו בועות סבון - יפות, שבריריות, וחסרות תוכן.",
+"אנו רודפים אחר אשליית האושר, ומחמיצים את האושר שבלחיות את המציאות.",
+"אנו מאמינים שביכולתנו להציל את העולם, אך בקושי מצליחים להציל את עצמנו.",
+"המציאות היא כמו קיר בטון, והחלומות שלנו הם כמו ציורי גרפיטי שמנסים לכסות אותו.",
+"אנו נאחזים באשליות כמו ילד שמחזיק בשמיכת הביטחון שלו, מפחדים מהאימה של העולם האמיתי.",
+"אנו מנסים לרצות את כולם, ובסופו של דבר מאכזבים את כולם, במיוחד את עצמנו.",
+"החלומות שלנו הם כמו כוכבים - נראים קרובים ובהירים, אך תמיד רחוקים מהישג יד.",
+"אנו מספרים לעצמנו סיפורים יפים כדי להתעלם מהעלילה המבולגנת של חיינו.",
+"אנו מנסים לתקן את העולם השבור, ובתהליך שוברים את עצמנו לרסיסים.",
+"האשליות הן הסם שאנו מכורים לו, והמציאות היא הגמילה הכואבת שאנו תמיד דוחים.",
+"אנו מחפשים אישור מאחרים, ושוכחים לתת אישור לעצמנו.",
+"בסופו של דבר, האשליות הן השקר היפה שאנו מספרים לעצמנו, והמציאות היא האמת המכוערת שאנחנו מתעלמים ממנה.",
             "הבעיות לעולם לא ייפתרו, רק צורתן תשתנה. אין פתרון, יש רק השלמה עם המצב הנתון."
         ];
      const paragraphs = [
@@ -196,6 +254,22 @@
                 content: "בתזמורת הקאקופונית של החיים, כל אחד מאיתנו מנגן את המנגינה הייחודית של שאיפותיו הלא רציונליות..."
             },
                 {
+        title: "תקווה אבודה",
+        content: "התקווה היא כמו חבר דמיוני - נחמדת למחשבה, אבל חסרת תועלת בעולם האמיתי."
+    },
+    {
+    title: "אנשים כועסים",
+    content: "לפי ניתוח מעמיק ומנומק למדי, אך לא בהכרח הגיוני לחלוטין, נראה שאכן סביר ביותר שאנשים יכעסו עליך ולא יהיו מרוצים ממך. ראשית, כפי שנאמר בפתגם העתיק, \"תמיד האדם הלא נכון יופיע בזמן הכי לא מתאים\", ואתה, ללא ספק, תמיד תהיה האדם הלא נכון במקום הלא נכון. גם כאשר כוונותיך טהורות ואתה פועל מתוך תום לב, איכשהו תצליח להרוס את חלומות חייהם של האנשים סביבך, כאילו זו מתנה מיוחדת שניחנת בה.<br><br>שנית, בהתחשב במצב האומלל והעגום של חייהם, סביר להניח שאנשים יהיו במצב רוח רע ברוב הזמן. וכאשר אדם במצב רוח רע, הוא נוטה לכעוס על כל אדם שנקרה בדרכו, בין אם הוא אשם במשהו או לא. אתה, כמובן, תהיה מטרה מועדפת לכעס הזה, שהרי כבר הוכחת את כישרונך הייחודי למשוך אש.<br><br>ולבסוף, בעולם שבו הגיון הוא מצרך נדיר, גם אצלך, אל תצפה שאנשים יחשבו בהגיון או יגיבו בצורה רציונלית. כאשר מדובר בך, נראה שאפילו החוקים הבסיסיים של ההיגיון אינם חלים. לכן, גם אם תנסה להסביר את עצמך או להצדיק את מעשיך, סביר להניח שאנשים פשוט לא יקשיבו או יבינו.<br><br>לסיכום, בין אם בגלל הכישרון המוזר שלך להיות תמיד לא במקום, מצב הרוח העכור של האנשים סביבך, או חוסר ההיגיון השורר בעולמך, נראה כמעט בלתי נמנע שאנשים יכעסו עליך ולא יהיו מרוצים ממך. אבל אל דאגה, תמיד תוכל למצוא נחמה בעובדה שאתה לפחות עקבי בחוסר המזל שלך."
+},
+    {
+        title: "אשליית האושר",
+        content: "אנו רודפים אחר האושר כמו כלב רודף אחר הזנב שלו - במעגלים אינסופיים של תסכול."
+    },
+    {
+        title: "שגעון החיים",
+        content: "החיים הם כמו קרקס - מלאים בליצנים, אקרובטים וחיות מאולפות, אבל חסרי היגיון לחלוטין."
+    },
+        {
         title: "תקווה אבודה",
         content: "התקווה היא כמו חבר דמיוני - נחמדת למחשבה, אבל חסרת תועלת בעולם האמיתי."
     },
@@ -246,66 +320,166 @@
     {
         title: "צחוק הגורל",
         content: "הגורל צוחק לאידנו בכל פעם שאנו מעזים לקוות לטוב יותר. הצחוק שלו הוא הפסקול של חיינו."
+    },
+    {
+        title: "כישלון מובטח",
+        content: "הכישלון הוא הדבר היחיד שאנו יכולים להיות בטוחים בו - כל השאר זה רק הימור."
+    },
+    {
+        title: "בדידות נצחית",
+        content: "אנו נולדים לבד ומתים לבד, וכל מה שקורה בינתיים זה רק הסחת דעת זמנית."
+    },
+    {
+        title: "אכזבה מתמדת",
+        content: "החיים הם שרשרת אינסופית של אכזבות, כל אחת מהן מכינה אותנו לזו הבאה אחריה."
+    },
+    {
+        title: "ייאוש משחרר",
+        content: "רק כשנאמץ את הייאוש נוכל להשתחרר מכבלי התקווה הכוזבת ולחיות בשלווה."
+    },
+    {
+        title: "אהבה אבודה",
+        content: "אהבה היא הפרח היפה ביותר בגן האשליות שלנו, והראשון לנבול במציאות האכזרית."
+    },
+    {
+        title: "זמן אכזר",
+        content: "הזמן הוא האויב הגדול ביותר שלנו - הוא לוקח את הכל ולא נותן דבר בתמורה."
+    },
+    {
+    title: "אכזבת העולם",
+    content: "לפי תורת האבסורד הקוסמי, נראה שאתה ניחן בכישרון מולד לאכזב את העולם בדרכים יצירתיות ובלתי צפויות. כל ניסיון שלך להשתלב או להתאים את עצמך לסביבה נידון לכישלון מראש, כאילו אתה מבצע ריקוד סלסה מורכב כשכולם סביבך רוקדים וואלס. גם כאשר אתה משקיע מאמצים כנים להיות חלק מהחברה, איכשהו תמיד תמצא את עצמך בודד על רחבת הריקודים, מקפץ לצלילי מוזיקה שרק אתה שומע.<br><br>זוהי מתנה נדירה, יכולת זו לחיות בתזזית מתמדת של אי-התאמה. בעוד אחרים מנווטים בחייהם בקלות יחסית, אתה תמיד תמצא את עצמך הולך נגד הזרם, גם אם לא במתכוון. כל ניסיון להתיישר לפי הציפיות של החברה רק יוביל אותך לסטייה נוספת מהנורמה, כאילו אתה מצויד במצפן פנימי שתמיד מצביע בכיוון הלא נכון.<br><br>אך אל תתייאש, שכן בעולם האבסורדי שלנו, אולי דווקא חוסר ההתאמה שלך הוא הדבר האותנטי והאמיתי ביותר. בעוד שאחרים מנסים להתאים את עצמם לתבניות מוכנות מראש, אתה מגלם את חוסר ההיגיון הבסיסי של הקיום. אז המשך לרקוד את ריקוד הסלסה הייחודי שלך, גם אם אתה הרקדן היחיד על רחבת הריקודים של החיים."
+},
+    {
+        title: "קיום חסר פשר",
+        content: "אנו חיים חיים חסרי משמעות, מחכים למוות שיגאל אותנו מהסבל הנצחי הזה."
+    },
+    {
+    title: "חלומות ואשליות",
+    content: "בתזמורת הקאקופונית של החיים, כל אחד מאיתנו מנגן את המנגינה הייחודית של שאיפותיו הלא רציונליות. אנו מלחינים בראשנו סימפוניות מפוארות של הצלחה והגשמה עצמית, בעוד המציאות המרה מנגנת ברקע מנגינת ליווי צורמת של כישלון וייאוש. ככל שאנו מנסים להרים את קולנו מעל ההמולה, כך מתגברת המוזיקה הדיסהרמונית של האכזבה.<br><br>כל אחד מאיתנו נושא בתוכו את ההזיות שלו, חלומות על עתיד זוהר שבו כל המשאלות מתגשמות. אך בעולם האכזרי שלנו, החלומות האלה נידונים להתנגש זה בזה כמו כדורי ביליארד שיכורים על שולחן משחק עקום. אנו מתרוצצים בין שאיפותינו המנוגדות, מנסים לתפוס את הסינתזה החמקמקה של הגשמה עצמית, רק כדי לגלות שוב ושוב שהיא בלתי ניתנת להשגה.<br><br>והמציאות? היא צוחקת למראה המאמצים השקופים שלנו. היא בולעת את האנשים ואת אשליותיהם בשלמותם, כמו חור שחור קוסמי שלא משאיר אחריו שום זכר. בסופו של דבר, כל השאיפות וההזיות שלנו מתמוססות לתוך הלועה האפל של הקיום, ואנו נותרים לבדנו, ערומים ופגיעים מול האמת המרה של חיינו.<br><br>אז הבה נרים כוסית לחלומות האבודים שלנו, לשאיפות המנותצות, ולצחוק הנורא של המציאות. כי בסימפוניה המטורפת הזו של החיים, אנחנו כולנו רק תווים חולפים במנגינה הנצחית של האבסורד."
+},
+    {
+        title: "עתיד עגום",
+        content: "העתיד הוא כמו חור שחור - ככל שאתה מתקרב אליו, כך פחות אור אתה רואה."
+    },
+    {
+        title: "אמת כואבת",
+        content: "האמת היא כמו סכין חדה - היא חותכת עמוק, אבל לפחות היא משחררת אותנו מאשליות."
+    },
+    {
+        title: "צחוק הגורל",
+        content: "הגורל צוחק לאידנו בכל פעם שאנו מעזים לקוות לטוב יותר. הצחוק שלו הוא הפסקול של חיינו."
     }
 
         ];
 
-        const maxQuotes = 10;
-        const maxBalls = 3;
-        const quoteElements = [];
-        const ballElements = [];
+const maxQuotes = 10;
+const maxBalls = 3;
+const quoteElements = [];
+const ballElements = [];
 
-        function createQuote() {
-            const quote = document.createElement('div');
-            quote.classList.add('quote');
-            quote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
-            quote.style.left = `-${quote.offsetWidth}px`;
-            quote.style.top = `${Math.random() * (window.innerHeight - quote.offsetHeight)}px`;
-            document.body.appendChild(quote);
+function createQuote() {
+    const quote = document.createElement('div');
+    quote.classList.add('quote');
+    quote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+    quote.style.left = `-${quote.offsetWidth}px`;
+    quote.style.top = `${Math.random() * (window.innerHeight - quote.offsetHeight)}px`;
+    document.body.appendChild(quote);
 
-            quoteElements.push(quote);
+    quoteElements.push(quote);
 
-            if (quoteElements.length > maxQuotes) {
-                const oldestQuote = quoteElements.shift();
-                oldestQuote.remove();
-            }
-        }
+    if (quoteElements.length > maxQuotes) {
+        const oldestQuote = quoteElements.shift();
+        oldestQuote.remove();
+    }
+}
 
-        function createBall() {
-            const ball = document.createElement('div');
-            ball.classList.add('ball');
-            const randomParagraph = paragraphs[Math.floor(Math.random() * paragraphs.length)];
-            ball.textContent = randomParagraph.title;
-            ball.style.left = `${Math.random() * (window.innerWidth - 150)}px`;
-            ball.style.top = `${Math.random() * (window.innerHeight - 150)}px`;
-            ball.addEventListener('click', () => {
-                const newWindow = window.open();
-                newWindow.document.write(`
-                    <h1>${randomParagraph.title}</h1>
-                    <p>${randomParagraph.content}</p>
-                    <button onclick="window.close()">חזרה</button>
-                `);
-            });
-            document.body.appendChild(ball);
+function createBall() {
+    const ball = document.createElement('div');
+    ball.classList.add('ball');
+    const randomParagraph = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+    ball.textContent = randomParagraph.title;
+    ball.style.left = `${Math.random() * (window.innerWidth - 150)}px`;
+    ball.style.top = `${Math.random() * (window.innerHeight - 150)}px`;
+    ball.addEventListener('click', () => {
+        const newWindow = window.open();
+        newWindow.document.write(`
+            <html lang="he">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>${randomParagraph.title}</title>
+                    <style>
+                        .treasure-note {
+                            direction: rtl;
+                            background-image: url('https://i.imgur.com/GCQfwTg.jpg');
+                            background-size: cover;
+                            padding: 50px;
+                            font-family: 'David Libre', serif;
+                            color: #4b2e1c;
+                            font-size: 24px;
+                            text-shadow: 1px 1px 3px rgba(255,255,255,0.5);
+                            border: 15px solid #8b5a2b;
+                            box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+                            margin: 20px;
+                        }
+                        .treasure-note h1 {
+                            font-size: 48px;
+                            font-weight: bold;
+                            margin-bottom: 30px;
+                            color: #8b0000;
+                            text-decoration: underline;
+                            text-align: center;
+                            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+                        }
+                        .treasure-note p {
+                            line-height: 1.6;
+                            text-align: justify;
+                            margin-bottom: 30px;
+                        }
+                        .treasure-note button {
+                            font-size: 24px;
+                            padding: 10px 20px;
+                            background-color: #8b0000;
+                            color: #fff;
+                            border: none;
+                            cursor: pointer;
+                            display: block;
+                            margin: 0 auto;
+                            font-family: 'David Libre', serif;
+                            box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+                        }
+                    </style>
+                    <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap" rel="stylesheet">
+                </head>
+                <body>
+                    <div class="treasure-note">
+                        <h1>${randomParagraph.title}</h1>
+                        <p>${randomParagraph.content}</p>
+                        <button onclick="window.close()">סגור </button>
+                    </div>
+                </body>
+            </html>
+        `);
+    });
+    document.body.appendChild(ball);
 
-            ballElements.push(ball);
+    ballElements.push(ball);
 
-            if (ballElements.length > maxBalls) {
-                const oldestBall = ballElements.shift();
-                oldestBall.remove();
-            }
-        }
+    if (ballElements.length > maxBalls) {
+        const oldestBall = ballElements.shift();
+        oldestBall.remove();
+    }
+}
 
-        for (let i = 0; i < 5; i++) {
-            createQuote();
-        }
+for (let i = 0; i < 5; i++) {
+    createQuote();
+}
 
-        for (let i = 0; i < maxBalls; i++) {
-            createBall();
-        }
+for (let i = 0; i < maxBalls; i++) {
+    createBall();
+}
 
-        setInterval(createQuote, 2000);
-        setInterval(createBall, 5000);
+setInterval(createQuote, 2000);
+setInterval(createBall, 5000);
     </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אין פיתרון</title>
-  <style>
+    <style>
         body {
             font-family: 'Courier New', monospace;
             background-color: #222;
@@ -13,13 +13,27 @@
             padding: 0;
             overflow: hidden;
         }
-        .quote {
+        .quote, .ball {
             position: absolute;
-            font-size: 2em;
             white-space: nowrap;
             animation: float 10s linear infinite;
         }
-
+        .quote {
+            font-size: 2em;
+        }
+        .ball {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ff0;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
         @keyframes float {
             0% {
                 transform: translateX(-100%);
@@ -28,14 +42,18 @@
                 transform: translateX(100%);
             }
         }
-
         @media screen and (max-width: 768px) {
             .quote {
                 font-size: 1.2em;
             }
+            .ball {
+                width: 100px;
+                height: 100px;
+                font-size: 1em;
+            }
         }
     </style>
-    </head>
+</head>
 <body>
     <script>
         const quotes = [
@@ -164,9 +182,78 @@
             "אל תחפש את הפיתרון, כי הוא לא יימצא לעולם. קבל את הבעיה כחלק בלתי נמנע.",
             "הבעיות לעולם לא ייפתרו, רק צורתן תשתנה. אין פתרון, יש רק השלמה עם המצב הנתון."
         ];
+     const paragraphs = [
+{
+    title: "אנשים כועסים",
+    content: "לפי ניתוח מעמיק ומנומק למדי, אך לא בהכרח הגיוני לחלוטין, נראה שאכן סביר ביותר שאנשים יכעסו עליך ולא יהיו מרוצים ממך. ראשית, כפי שנאמר בפתגם העתיק, \"תמיד האדם הלא נכון יופיע בזמן הכי לא מתאים\", ואתה, ללא ספק, תמיד תהיה האדם הלא נכון במקום הלא נכון. גם כאשר כוונותיך טהורות ואתה פועל מתוך תום לב, איכשהו תצליח להרוס את חלומות חייהם של האנשים סביבך, כאילו זו מתנה מיוחדת שניחנת בה.<br><br>שנית, בהתחשב במצב האומלל והעגום של חייהם, סביר להניח שאנשים יהיו במצב רוח רע ברוב הזמן. וכאשר אדם במצב רוח רע, הוא נוטה לכעוס על כל אדם שנקרה בדרכו, בין אם הוא אשם במשהו או לא. אתה, כמובן, תהיה מטרה מועדפת לכעס הזה, שהרי כבר הוכחת את כישרונך הייחודי למשוך אש.<br><br>ולבסוף, בעולם שבו הגיון הוא מצרך נדיר, גם אצלך, אל תצפה שאנשים יחשבו בהגיון או יגיבו בצורה רציונלית. כאשר מדובר בך, נראה שאפילו החוקים הבסיסיים של ההיגיון אינם חלים. לכן, גם אם תנסה להסביר את עצמך או להצדיק את מעשיך, סביר להניח שאנשים פשוט לא יקשיבו או יבינו.<br><br>לסיכום, בין אם בגלל הכישרון המוזר שלך להיות תמיד לא במקום, מצב הרוח העכור של האנשים סביבך, או חוסר ההיגיון השורר בעולמך, נראה כמעט בלתי נמנע שאנשים יכעסו עליך ולא יהיו מרוצים ממך. אבל אל דאגה, תמיד תוכל למצוא נחמה בעובדה שאתה לפחות עקבי בחוסר המזל שלך."
+},
+            {
+                title: "אכזבת העולם",
+                content: "לפי תורת האבסורד הקוסמי, נראה שאתה ניחן בכישרון מולד לאכזב את העולם בדרכים יצירתיות ובלתי צפויות..."
+            },
+            {
+                title: "חלומות ואשליות",
+                content: "בתזמורת הקאקופונית של החיים, כל אחד מאיתנו מנגן את המנגינה הייחודית של שאיפותיו הלא רציונליות..."
+            },
+                {
+        title: "תקווה אבודה",
+        content: "התקווה היא כמו חבר דמיוני - נחמדת למחשבה, אבל חסרת תועלת בעולם האמיתי."
+    },
+    {
+        title: "אשליית האושר",
+        content: "אנו רודפים אחר האושר כמו כלב רודף אחר הזנב שלו - במעגלים אינסופיים של תסכול."
+    },
+    {
+        title: "שגעון החיים",
+        content: "החיים הם כמו קרקס - מלאים בליצנים, אקרובטים וחיות מאולפות, אבל חסרי היגיון לחלוטין."
+    },
+    {
+        title: "כישלון מובטח",
+        content: "הכישלון הוא הדבר היחיד שאנו יכולים להיות בטוחים בו - כל השאר זה רק הימור."
+    },
+    {
+        title: "בדידות נצחית",
+        content: "אנו נולדים לבד ומתים לבד, וכל מה שקורה בינתיים זה רק הסחת דעת זמנית."
+    },
+    {
+        title: "אכזבה מתמדת",
+        content: "החיים הם שרשרת אינסופית של אכזבות, כל אחת מהן מכינה אותנו לזו הבאה אחריה."
+    },
+    {
+        title: "ייאוש משחרר",
+        content: "רק כשנאמץ את הייאוש נוכל להשתחרר מכבלי התקווה הכוזבת ולחיות בשלווה."
+    },
+    {
+        title: "אהבה אבודה",
+        content: "אהבה היא הפרח היפה ביותר בגן האשליות שלנו, והראשון לנבול במציאות האכזרית."
+    },
+    {
+        title: "זמן אכזר",
+        content: "הזמן הוא האויב הגדול ביותר שלנו - הוא לוקח את הכל ולא נותן דבר בתמורה."
+    },
+    {
+        title: "קיום חסר פשר",
+        content: "אנו חיים חיים חסרי משמעות, מחכים למוות שיגאל אותנו מהסבל הנצחי הזה."
+    },
+    {
+        title: "עתיד עגום",
+        content: "העתיד הוא כמו חור שחור - ככל שאתה מתקרב אליו, כך פחות אור אתה רואה."
+    },
+    {
+        title: "אמת כואבת",
+        content: "האמת היא כמו סכין חדה - היא חותכת עמוק, אבל לפחות היא משחררת אותנו מאשליות."
+    },
+    {
+        title: "צחוק הגורל",
+        content: "הגורל צוחק לאידנו בכל פעם שאנו מעזים לקוות לטוב יותר. הצחוק שלו הוא הפסקול של חיינו."
+    }
 
-      const maxQuotes = 10;
+        ];
+
+        const maxQuotes = 10;
+        const maxBalls = 3;
         const quoteElements = [];
+        const ballElements = [];
 
         function createQuote() {
             const quote = document.createElement('div');
@@ -184,11 +271,41 @@
             }
         }
 
+        function createBall() {
+            const ball = document.createElement('div');
+            ball.classList.add('ball');
+            const randomParagraph = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+            ball.textContent = randomParagraph.title;
+            ball.style.left = `${Math.random() * (window.innerWidth - 150)}px`;
+            ball.style.top = `${Math.random() * (window.innerHeight - 150)}px`;
+            ball.addEventListener('click', () => {
+                const newWindow = window.open();
+                newWindow.document.write(`
+                    <h1>${randomParagraph.title}</h1>
+                    <p>${randomParagraph.content}</p>
+                    <button onclick="window.close()">חזרה</button>
+                `);
+            });
+            document.body.appendChild(ball);
+
+            ballElements.push(ball);
+
+            if (ballElements.length > maxBalls) {
+                const oldestBall = ballElements.shift();
+                oldestBall.remove();
+            }
+        }
+
         for (let i = 0; i < 5; i++) {
             createQuote();
         }
 
+        for (let i = 0; i < maxBalls; i++) {
+            createBall();
+        }
+
         setInterval(createQuote, 2000);
+        setInterval(createBall, 5000);
     </script>
 </body>
 </html>
